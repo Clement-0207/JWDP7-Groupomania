@@ -115,7 +115,7 @@ CREATE TABLE `post_like` (
 #########################################
 
 Retour sur le projet, dans le terminal nous sommes dans le dossier JWDP7_groupomania.
-Lancer les commandes suivantes:
+Lancez les commandes suivantes:
 - cd backend
 - npm install
     
@@ -133,7 +133,7 @@ DB_DATABASE=mygroupo
 
 
 
-Installer ensuite nodemon : 
+Installez ensuite nodemon : 
 - npm install -g nodemon
 
 Et on lance le backend (dans le terminal toujours) :
@@ -148,7 +148,7 @@ Votre backend est à présent opérationnel
 :arrow_right: Frontend:
 
 Dans un nouveau terminal ouvert depuis le dossier groupomania,
-utiliser la commande suivante : 
+utilisez la commande suivante : 
 - cd frontend
 
 Puis :
