@@ -1,0 +1,27 @@
+<nav>
+  <div class="logo">
+    <div class="logo-image"><img src="../../assets/images/icon-left-font-monochrome-white.png"></div>
+    <div class="logo-text"></div>
+  </div>
+  <h4>échanges salariés : </h4>
+  <h5>Le meilleur moyen de connaître les multiples énergies sociales de l'entreprise...
+  </h5>
+  <div class="right-nav">
+    <ul>
+      <li><button mat-raised-button color="primary" (click)="active" routerLink="signup"
+          *ngIf="!isAuth">Inscription</button></li>
+      <li><button mat-raised-button color="accent" (click)="active" routerLink="login"
+          *ngIf="!isAuth">Connexion</button></li>
+      <li><button mat-raised-button color="warn" (click)="onLogout()" *ngIf="isAuth">Déconnexion</button><i
+          class='fas fa-user fa-pull-right fa-border fa-2x' *ngIf="isAuth" (click)="onProfilePage()"></i></li>
+    </ul>
+  </div>
+</nav>
+<div class="left-nav">
+  <ul>
+    <li><button mat-raised-button color="primary" (click)="active" routerLink="posts" *ngIf="isAuth">Tous les
+        messages</button></li>
+    <li><button mat-raised-button color="primary" (click)="active" routerLink="new-post" *ngIf="isAuth">Ajouter un
+        message</button></li>
+  </ul>
+</div>

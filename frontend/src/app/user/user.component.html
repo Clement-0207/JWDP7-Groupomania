@@ -1,0 +1,11 @@
+<div class="user">
+  <p>Nom : {{userName | uppercase}}
+
+  </p>
+  <div class="control-buttons">
+    <button class="admin" mat-raised-button color="primary" (click)="onModifyUser()">Modifier mon compte</button>
+    <button class="admin" mat-raised-button color="warn" (click)="onDeleteUser()">Supprimer mon compte</button>
+  </div>
+  {{errorMessage}}
+
+</div>

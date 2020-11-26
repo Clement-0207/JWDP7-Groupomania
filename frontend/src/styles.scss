@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Mali:700|Source+Sans+Pro');
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  letter-spacing: 0.07em;
+  margin: 0;
+  white-space: normal;
+  background: rgb(219, 224, 229);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+mat-spinner {
+  margin: auto;
+}

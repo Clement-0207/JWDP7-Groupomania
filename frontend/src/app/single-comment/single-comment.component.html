@@ -1,0 +1,31 @@
+<mat-spinner *ngIf="loading"></mat-spinner>
+<div class="comment-container" *ngIf="!loading">
+  <div class="comment-info">
+    <p>{{ comment_body }}</p>
+    <p>{{ written_on | date:'short' }}</p>
+    <p>{{ name }}</p>
+    <div class="like-buttons" *ngIf="!likePending">
+      <div class="likes">
+        <i [ngClass]="{ 'fas liked': liked, 'far': !liked, 'disabled': disliked }" class="like fa-thumbs-up fa-lg"
+          (click)="onLike()"></i>
+        <span>{{ nbLikes }}</span>
+      </div>
+      <div class="dislikes">
+        <i [ngClass]="{ 'fas disliked': disliked, 'far': !disliked, 'disabled': liked }"
+          class="dislike fa-thumbs-down fa-lg" (click)="onDislike()"></i>
+        <span>{{ nbDislikes }}</span>
+      </div>
+    </div>
+    <div class="like-pending" *ngIf="likePending">
+      <mat-spinner class="white-spinner"></mat-spinner>
+    </div>
+    <div class="control-buttons">
+      <button mat-raised-button color="primary" (click)="onModify()"
+        *ngIf="(userId == account_id) || isAdmin">MODIFIER</button>
+      <button mat-raised-button color="warn" (click)="onDelete()"
+        *ngIf="(userId == account_id) || isAdmin">SUPPRIMER LE MESSAGE</button>
+      <button mat-raised-button color="warn" (click)="onDeleteUser(account_id)" *ngIf="isAdmin">SUPPRIMER
+        L'UTILISATEUR</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+.post-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.post-list-item {
+  text-align: left;
+  width: 75%;
+  margin: 15px;
+  padding: 20px;
+  border: hidden 2px;
+  background-color: white;
+
+  img {
+    max-width: 200px;
+    max-height: 250px;
+  }
+
+  h4 {
+    margin: 0;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 20px rgba(120, 120, 120, 0.3);
+  }
+}
+
+.list-title {
+  text-align: center;
+  margin: 1em;
+  font-size: 2em;
+}
+
+.like-buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-start;
+
+  i {
+    margin-right: 0.5em;
+    cursor: pointer;
+  }
+}
+
+.likes,
+.dislikes {
+  margin: 0 0.4em 0 0.4em;
+  padding-top: 0.2em;
+  font-size: smaller;
+}
+.likes {
+  margin-left: 1em;
+}
+
+.control-buttons {
+  button {
+    margin: 1em 1em 0 0;
+  }
+}

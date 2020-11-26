@@ -1,0 +1,12 @@
+<mat-spinner *ngIf="loading"></mat-spinner>
+<form [formGroup]="postForm" *ngIf="!loading">
+  <div class="form-group">
+    <label for="title">Titre</label>
+    <input type="text" class="form-control" id="title" formControlName="title">
+  </div>
+  <div class="form-group">
+    <label for="body">Message</label>
+    <textarea class="form-control" id="body" rows="25" formControlName="body"></textarea>
+  </div>
+  <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="postForm.invalid">PUBLIER</button>
+</form>

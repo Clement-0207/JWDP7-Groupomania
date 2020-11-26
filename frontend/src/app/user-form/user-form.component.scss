@@ -1,0 +1,16 @@
+.user {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: left;
+  width: 75%;
+  margin: auto;
+  padding: 20px;
+  border: hidden 2px;
+  background-color: white;
+}
+
+button {
+width: max-content;
+}
